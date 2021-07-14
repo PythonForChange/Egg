@@ -4,13 +4,13 @@ from egg.resources.constants import white
 
 def install(name: str):
     try:
-        install_option_1(name)
-        raise Exception('error')
+        install_option_2(name)
+        #raise Exception("error")
     except:
         print(white+"Install failed")
         print(white+"Retrying...")
         try:
-            install_option_2(name)
+            install_option_1(name)
         except:
             print(white+"Install failed")
             return "error"
