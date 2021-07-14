@@ -1,9 +1,7 @@
 from egg import *
 
-#eggConsole()
+eggConsole()
 
-#install("$upgrade")
-#upgrade("matplotlib")
 """
 covid=Repo("CovidPlot")
 cp=covid.pull("covidplot","CovidData")

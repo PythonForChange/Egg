@@ -1,11 +1,16 @@
-~
 _author="eanorambuena"
 _author_email="eanorambuena@uc.cl"
 
 eggConsoleCommands=[
   "nqs",
   "new",
-  "end",
+  "login,"
+  "register",
+  "install",
+  "upgrade",
+  "help",
+  "clear",
+  "end"
 ]
 
 developerConsoleCommands=[
@@ -13,8 +18,8 @@ developerConsoleCommands=[
   "compile",
   "save",
   "run",
-  "end",
-  "delay"
+  "delay",
+  "end"
 ]
 
 nqsCommands=[
@@ -30,6 +35,5 @@ nqsCommands=[
 
 journalistConsoleCommands=[
   "save",
-  "end",
+  "end"
 ]
-~

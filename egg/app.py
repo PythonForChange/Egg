@@ -1,12 +1,15 @@
 #Imports
-from egg.resources.console import get
+from egg.resources.console import get, clearConsole
 from egg.resources.extensions import py
 from egg.resources.constants import *
+from egg.resources.modules import install, upgrade
+from egg.resources.help import help
+from egg.resources.auth import login, register
 try:
+  from news.app import journalistConsole
   from nqs.developer.app import developerConsole
 except:
   pass
-from news.app import journalistConsole
 
 def eggConsole(condition: bool = True):
   print(white+"Egg Console is now running")
@@ -18,31 +21,23 @@ def eggConsole(condition: bool = True):
     elif i=="$new":
       journalistConsole()
     elif i=="$login":
-      print(white+"Username:")
-      j=get("egg")
-      try:
-        from user.private import username,password
-        if j==username:
-          print(white+"Password:")
-          k=get("egg")
-          if k==password:
-            logged=1
-            print(white+"Done") 
-      except:
-        pass
+      login()
     elif i=="$register":
-      try:
-        print(white+"Username:")
-        j=get("egg")
-        print(white+"Password:")
-        k=get("egg")
-        py.write("user/private","username,password=\"username\",\"password\"")
-        print(white+"Done")
-      except:
-        pass 
+      register()
+    elif i=="$install":
+      print(white+"Package:")
+      name=get("egg")
+      install(name)
+    elif i=="$upgrade":
+      print(white+"Package:")
+      name=get("egg")
+      upgrade(name)
+    elif i=="$help":
+      help()
+    elif i=="$clear":
+      clearConsole()
     elif i=="$end":
       print(white+"Egg Console stopped running")
       return "done"
     else:
     	pass
-		

@@ -7,14 +7,14 @@ def install(name: str):
         install_option_1(name)
         raise Exception('error')
     except:
-        print("Install failed")
-        print("Retrying...")
+        print(white+"Install failed")
+        print(white+"Retrying...")
         try:
             install_option_2(name)
         except:
-            print("Install failed")
+            print(white+"Install failed")
             return "error"
-    print(name+" succesfully installed")
+    print(white+name+" succesfully installed")
     return "done"
         
 def install_option_1(name: str):
@@ -34,7 +34,7 @@ def upgrade(name: str):
     try:
         subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', name])
     except:
-        print(name+" succesfully ugraded")
+        print(white+name+" succesfully ugraded")
     return "done"
 
 class Repo():
