@@ -2,7 +2,7 @@
 from egg.resources.console import get, clearConsole
 from egg.resources.extensions import py
 from egg.resources.constants import *
-from egg.resources.modules import install, upgrade
+from egg.resources.modules import install, upgrade, Repo
 from egg.resources.help import help
 from egg.resources.auth import login, register
 from egg.library.repos import nqs
@@ -33,6 +33,13 @@ def eggConsole(condition: bool = True):
       print(white+"Package:")
       name=get("egg")
       upgrade(name)
+    elif i=="$pull":
+      print(white+"Repo:")
+      name=get("egg")
+      repo=Repo(name)
+      print(white+"Package:")
+      package=get("egg")
+      last=repo.pull(package)
     elif i=="$help":
       help()
     elif i=="$clear":

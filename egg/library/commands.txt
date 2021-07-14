@@ -8,6 +8,7 @@ eggConsoleCommands=[
   "register",
   "install",
   "upgrade",
+  "pull",
   "help",
   "clear",
   "end"
