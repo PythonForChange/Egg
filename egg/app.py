@@ -5,9 +5,10 @@ from egg.resources.constants import *
 from egg.resources.modules import install, upgrade
 from egg.resources.help import help
 from egg.resources.auth import login, register
+from egg.library.repos import nqs
 try:
   from news.app import journalistConsole
-  from nqs.developer.app import developerConsole
+  developerConsole=nqs.developer.app.developerConsole
 except:
   pass
 

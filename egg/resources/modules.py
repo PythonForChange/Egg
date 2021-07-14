@@ -40,7 +40,7 @@ def upgrade(name: str):
 class Repo():
     def __init__(self,name: str):
         self.name=name
-    def pull(self,package: str,functions: str):
+    def pull(self,package: str,functions: str = ""):
         funcs=functions.split(" ")
         try:
             package="github_com.PythonForChange."+self.name+"."+package
