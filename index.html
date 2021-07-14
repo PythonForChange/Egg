@@ -1,6 +1,13 @@
 <html>
+<script> var timer = null;
+    function auto_reload(){
+        top.location.href = 'index.html';
+    }
+</script> 
+<body onload="timer = setTimeout('auto_reload()',5000);">
 $egg aqui
 <p>
 $egg 2
 </p>
+</body>
 </html>
