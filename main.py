@@ -1,12 +1,16 @@
-from nqs import write, run
-from egg import py, sleep, eggConsole, install
+#from nqs import write, run
+from egg import sleep, eggConsole, install, Repo
 
 f="example2"
 #eggConsole()
 #run(f)
 #write(f)
 
-from github_com.PythonForChange import covidplot
 install("matplotlib")
-c=covidplot.CovidData()
-c.plot("casos")
+
+covid=Repo("CovidPlot")
+cp=covid.pull("covidplot","CovidData")
+#pull("CovidPlot")
+covidata=cp.CovidData
+c=covidata()
+c.plot

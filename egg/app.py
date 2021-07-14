@@ -2,7 +2,10 @@
 from egg.resources.console import get
 from egg.resources.extensions import py
 from egg.resources.constants import *
-from nqs.developer.app import developerConsole
+try:
+  from nqs.developer.app import developerConsole
+except:
+  pass
 from news.app import journalistConsole
 
 def eggConsole(condition: bool = True):
