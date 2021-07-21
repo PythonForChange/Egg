@@ -12,12 +12,8 @@ def eggConsole(condition: bool = True):
     while condition:
         i=get("egg")
         if i=="$nqs":
-            try:
-                from egg.library.repos import nqs
-                developerConsole=nqs.developer.app.developerConsole
-                developerConsole()
-            except:
-                pass
+            from nqs.developer.app import developerConsole
+            developerConsole()
         elif i=="$new":
             from news.app import journalistConsole
             journalistConsole()
