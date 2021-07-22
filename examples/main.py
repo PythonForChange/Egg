@@ -1,4 +1,4 @@
-from egg import *
+from ..eggcosystem import eggConsole
 
 eggConsole()
 
