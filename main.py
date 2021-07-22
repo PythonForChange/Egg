@@ -1,9 +1,9 @@
-from ..eggcosystem import eggConsole
+from egg import eggConsole
 
 eggConsole()
 
 """
-document=Document("template")
+document=Document("examples/template")
 document.addTag("h1","Hi","aqui")
 document.write("xd","2")
 
