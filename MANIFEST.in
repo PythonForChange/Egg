@@ -1,9 +1,0 @@
-include README.md
-include LICENSE
-include .git/*
-include .vscode/*
-include egg/*
-include examples/*
-include github_com/*
-include news/*
-include nqs/*
